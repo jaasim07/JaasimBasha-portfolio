@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jaasim Basha | Cybersecurity Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0d1117;
+      color: #c9d1d9;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #161b22;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 1px solid #30363d;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      color: #58a6ff;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: #8b949e;
+      margin: 0 15px;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      color: #58a6ff;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #58a6ff;
+      margin-bottom: 20px;
+    }
+
+    .section-card {
+      background-color: #161b22;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 30px;
+      border: 1px solid #30363d;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    .skills span {
+      background: #30363d;
+      padding: 6px 12px;
+      margin: 5px;
+      display: inline-block;
+      border-radius: 4px;
+      color: #c9d1d9;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-top: 10px;
+      background: #0d1117;
+      border: 1px solid #30363d;
+      color: #c9d1d9;
+      border-radius: 4px;
+    }
+
+    .contact-form button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      background: #238636;
+      border: none;
+      color: white;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #8b949e;
+      border-top: 1px solid #30363d;
+    }
+
+    @media (max-width: 600px) {
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Jaasim Basha</h1>
+    <p>Cybersecurity Specialist</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#services">Services</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="section-card">
+      <p>I am a cybersecurity professional with a passion for ethical hacking, digital privacy, and infrastructure protection. I help businesses proactively manage and mitigate cyber risks through strategic security planning and hands-on technical implementations.</p>
+      <p><strong>Education:</strong> B.Tech in Information Security, XYZ University (2020)</p>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    <div class="section-card">
+      <p><strong>Cybersecurity Analyst</strong> – SecureTech Solutions (2021–Present)</p>
+      <ul>
+        <li>Performed penetration tests and vulnerability assessments.</li>
+        <li>Implemented and monitored enterprise security systems.</li>
+      </ul>
+    </div>
+    <div class="section-card">
+      <p><strong>IT Security Intern</strong> – DataShield Corp (2020)</p>
+      <ul>
+        <li>Configured IDS/IPS systems and analyzed logs.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="section-card skills">
+      <span>Ethical Hacking</span>
+      <span>Penetration Testing</span>
+      <span>Network Security</span>
+      <span>SIEM (Splunk, QRadar)</span>
+      <span>Vulnerability Assessment</span>
+      <span>Firewall & Endpoint Security</span>
+      <span>Python</span>
+      <span>Bash Scripting</span>
+    </div>
+  </section>
+
+  <section id="services">
+    <h2>Services</h2>
+    <div class="section-card">
+      <ul>
+        <li><strong>Penetration Testing:</strong> Simulate attacks to expose system vulnerabilities.</li>
+        <li><strong>Security Audits:</strong> Comprehensive review of security posture.</li>
+        <li><strong>Vulnerability Assessment:</strong> Identify and prioritize weaknesses.</li>
+        <li><strong>Consulting:</strong> Tailored cybersecurity strategies and implementation.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="section-card">
+      <ul>
+        <li><strong>BankSecure Audit:</strong> Full security audit for a mid-sized bank's web application.</li>
+        <li><strong>E-Commerce Firewall:</strong> Implemented firewall rules and traffic segmentation.</li>
+        <li><strong>PhishGuard:</strong> Developed phishing awareness training for 300+ staff.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="section-card contact-form">
+      <form>
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea rows="5" placeholder="Your Message"></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+      <p style="margin-top: 15px;">
+        Or email me directly: <a href="mailto:jaasim.basha@example.com" style="color:#58a6ff;">jaasim.basha@example.com</a>
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Jaasim Basha | Cybersecurity Specialist
+  </footer>
+
+</body>
+</html>
