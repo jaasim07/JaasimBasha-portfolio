@@ -1,214 +1,379 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jaasim Basha | Cybersecurity Portfolio</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>JAASIM BASHA J — Cybersecurity Portfolio</title>
+  <meta name="description" content="JAASIM BASHA J — Aspiring Ethical Hacker & Cybersecurity Enthusiast. 2nd Year B.E Cyber Security at Mahendra Engineering College." />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome for icons (fallback if offline, icons are inline SVG where important) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-jQq8z5K6Yf3a7gF6bQ/2xq0Kp7r3c5Y1y4K1Yj6s8z1O2K7u3m9YpKq8m6J/3Z1G2m7k8m3Y1Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      scroll-behavior: smooth;
+    :root{
+      --bg:#071021;
+      --panel:#0f1724;
+      --muted:#94a3b8;
+      --accent:#00f6a8; /* neon green */
+      --accent-2:#00b8ff; /* neon blue */
+      --glass: rgba(255,255,255,0.03);
+      --card-shadow: 0 6px 18px rgba(2,6,23,0.6);
+      color-scheme: dark;
+      font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
     }
 
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #0d1117;
-      color: #c9d1d9;
-      line-height: 1.6;
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background: radial-gradient(1200px 600px at 10% 10%, rgba(0,184,255,0.04), transparent),
+                  radial-gradient(900px 400px at 90% 90%, rgba(0,246,168,0.03), transparent),
+                  var(--bg);
+      color:#e6eef8;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      overflow-x:hidden;
     }
 
-    header {
-      background-color: #161b22;
-      padding: 20px;
-      text-align: center;
-      border-bottom: 1px solid #30363d;
-    }
+    /* Container */
+    .container{max-width:1100px;margin:40px auto;padding:28px}
 
-    header h1 {
-      font-size: 2rem;
-      color: #58a6ff;
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:14px}
+    .logo{
+      width:52px;height:52px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent-2));
+      display:grid;place-items:center;font-weight:700;color:#042;box-shadow:0 6px 20px rgba(0,184,255,0.06), inset 0 -6px 18px rgba(0,0,0,0.25);
     }
+    .brand h1{font-size:16px;margin:0}
+    nav{display:flex;gap:14px;align-items:center}
+    nav a{color:var(--muted);text-decoration:none;padding:8px 12px;border-radius:8px;font-weight:600}
+    nav a:hover{color:var(--accent-2);background:var(--glass)}
 
-    nav {
-      margin-top: 10px;
-    }
+    .controls{display:flex;gap:10px;align-items:center}
+    .btn{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:8px 12px;border-radius:10px;font-weight:600;cursor:pointer}
+    .btn.primary{background:linear-gradient(90deg,var(--accent-2),var(--accent));color:#021; border:0}
 
-    nav a {
-      color: #8b949e;
-      margin: 0 15px;
-      text-decoration: none;
-    }
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 380px;gap:28px;margin-top:32px;align-items:center}
+    @media (max-width:880px){.hero{grid-template-columns:1fr;}.container{padding:18px}}
 
-    nav a:hover {
-      color: #58a6ff;
-    }
+    .intro{padding:28px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);border-radius:16px;box-shadow:var(--card-shadow)}
+    .intro h2{margin:0;font-size:22px;letter-spacing:0.6px}
+    .title{font-size:28px;margin:8px 0 12px}
+    .tagline{color:var(--muted);margin-bottom:18px}
+    .cta{display:flex;gap:12px}
 
-    section {
-      padding: 60px 20px;
-      max-width: 900px;
-      margin: auto;
-    }
+    /* Profile Card */
+    .profile-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:16px;padding:18px;box-shadow:var(--card-shadow);height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center}
+    .profile-card img{width:180px;height:180px;object-fit:cover;border-radius:18px;border:4px solid rgba(255,255,255,0.04);box-shadow:0 8px 30px rgba(0,0,0,0.6)}
+    .profile-card h3{margin:12px 0 0}
+    .profile-card p{color:var(--muted);margin:6px 0 14px}
 
-    h2 {
-      color: #58a6ff;
-      margin-bottom: 20px;
-    }
+    /* Sections */
+    section{margin-top:28px}
+    .panel{padding:20px;border-radius:14px;background:linear-gradient(180deg, rgba(255,255,255,0.015), transparent);box-shadow:var(--card-shadow)}
 
-    .section-card {
-      background-color: #161b22;
-      padding: 20px;
-      border-radius: 8px;
-      margin-bottom: 30px;
-      border: 1px solid #30363d;
-    }
+    /* Skills */
+    .skills-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    @media(max-width:700px){.skills-grid{grid-template-columns:1fr}}
+    .skill{padding:12px;border-radius:10px;background:linear-gradient(90deg,rgba(255,255,255,0.01),transparent);display:flex;flex-direction:column;gap:8px}
+    .skill .meta{display:flex;justify-content:space-between;align-items:center}
+    .progress{height:10px;background:rgba(255,255,255,0.04);border-radius:8px;overflow:hidden}
+    .progress > i{display:block;height:100%;border-radius:8px;background:linear-gradient(90deg,var(--accent-2),var(--accent));width:0;transition:width 1s ease}
 
-    ul {
-      padding-left: 20px;
-    }
+    /* Terminal style */
+    .terminal{background:#041022;border-radius:10px;padding:14px;font-family:'Roboto Mono',monospace;color:var(--muted);font-size:13px;box-shadow:inset 0 1px 0 rgba(255,255,255,0.02)}
 
-    .skills span {
-      background: #30363d;
-      padding: 6px 12px;
-      margin: 5px;
-      display: inline-block;
-      border-radius: 4px;
-      color: #c9d1d9;
-    }
+    /* Timeline */
+    .timeline{position:relative;padding-left:18px}
+    .timeline::before{content:'';position:absolute;left:6px;top:8px;width:3px;height:calc(100% - 12px);background:linear-gradient(180deg,var(--accent),var(--accent-2));border-radius:6px}
+    .tl-item{position:relative;padding:12px 12px 12px 26px;margin-bottom:8px;border-radius:8px}
+    .tl-item time{display:block;color:var(--muted);font-size:13px}
+    .tl-dot{position:absolute;left:-4px;top:18px;width:14px;height:14px;border-radius:14px;background:#021;box-shadow:0 0 14px rgba(0,184,255,0.12), 0 0 4px rgba(0,246,168,0.06);border:3px solid #021}
 
-    .contact-form input,
-    .contact-form textarea {
-      width: 100%;
-      padding: 12px;
-      margin-top: 10px;
-      background: #0d1117;
-      border: 1px solid #30363d;
-      color: #c9d1d9;
-      border-radius: 4px;
-    }
+    /* Portfolio placeholder */
+    .placeholder{display:flex;align-items:center;justify-content:center;flex-direction:column;padding:40px;border-radius:12px}
+    .muted{color:var(--muted)}
 
-    .contact-form button {
-      margin-top: 15px;
-      padding: 10px 20px;
-      background: #238636;
-      border: none;
-      color: white;
-      border-radius: 4px;
-      cursor: pointer;
-    }
+    /* Contact */
+    .contact-grid{display:grid;grid-template-columns:1fr 420px;gap:20px}
+    @media(max-width:980px){.contact-grid{grid-template-columns:1fr}}
+    .contact-list{display:flex;flex-direction:column;gap:12px}
+    .contact-item{display:flex;gap:12px;align-items:center;padding:12px;border-radius:10px;background:rgba(255,255,255,0.02)}
 
-    footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9rem;
-      color: #8b949e;
-      border-top: 1px solid #30363d;
-    }
+    form .row{display:flex;gap:8px}
+    form input, form textarea{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit}
+    form textarea{min-height:120px}
 
-    @media (max-width: 600px) {
-      nav a {
-        display: block;
-        margin: 10px 0;
-      }
+    footer{margin-top:28px;text-align:center;color:var(--muted);font-size:13px}
+
+    /* small niceties */
+    .glow{box-shadow:0 0 18px rgba(0,184,255,0.04)}
+    .neon-text{background:linear-gradient(90deg,var(--accent-2),var(--accent));-webkit-background-clip:text;background-clip:text;color:transparent}
+
+    /* hover effects */
+    .profile-card:hover img{transform:translateY(-6px);transition:transform .4s}
+
+    /* cursor effect */
+    .fancy-cursor{position:fixed;pointer-events:none;mix-blend-mode:screen;width:18px;height:18px;border-radius:50%;transform:translate(-50%,-50%);z-index:9999;border:2px solid rgba(0,184,255,0.9);box-shadow:0 0 14px rgba(0,184,255,0.12)}
+
+    /* small screens adjustments */
+    @media(max-width:520px){
+      .logo{width:44px;height:44px}
+      .profile-card img{width:140px;height:140px}
     }
   </style>
 </head>
 <body>
+  <div class="fancy-cursor" id="cursor"></div>
 
-  <header>
-    <h1>Jaasim Basha</h1>
-    <p>Cybersecurity Specialist</p>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#experience">Experience</a>
-      <a href="#skills">Skills</a>
-      <a href="#services">Services</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">JB</div>
+        <div>
+          <h1 style="font-size:14px;margin:0">JAASIM BASHA J</h1>
+          <div style="font-size:12px;color:var(--muted)">Aspiring Ethical Hacker</div>
+        </div>
+      </div>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <div class="section-card">
-      <p>I am a cybersecurity professional with a passion for ethical hacking, digital privacy, and infrastructure protection. I help businesses proactively manage and mitigate cyber risks through strategic security planning and hands-on technical implementations.</p>
-      <p><strong>Education:</strong> B.Tech in Information Security, XYZ University (2020)</p>
-    </div>
-  </section>
+      <nav id="nav">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+      </nav>
 
-  <section id="experience">
-    <h2>Experience</h2>
-    <div class="section-card">
-      <p><strong>Cybersecurity Analyst</strong> – SecureTech Solutions (2021–Present)</p>
-      <ul>
-        <li>Performed penetration tests and vulnerability assessments.</li>
-        <li>Implemented and monitored enterprise security systems.</li>
-      </ul>
-    </div>
-    <div class="section-card">
-      <p><strong>IT Security Intern</strong> – DataShield Corp (2020)</p>
-      <ul>
-        <li>Configured IDS/IPS systems and analyzed logs.</li>
-      </ul>
-    </div>
-  </section>
+      <div class="controls">
+        <button class="btn" id="themeToggle" title="Toggle light/dark">🌙</button>
+        <a class="btn primary" href="resume.pdf" download id="downloadResume">Download Resume</a>
+      </div>
+    </header>
 
-  <section id="skills">
-    <h2>Skills</h2>
-    <div class="section-card skills">
-      <span>Ethical Hacking</span>
-      <span>Penetration Testing</span>
-      <span>Network Security</span>
-      <span>SIEM (Splunk, QRadar)</span>
-      <span>Vulnerability Assessment</span>
-      <span>Firewall & Endpoint Security</span>
-      <span>Python</span>
-      <span>Bash Scripting</span>
-    </div>
-  </section>
+    <main>
+      <section id="home" class="hero">
+        <div class="intro panel">
+          <h2 class="neon-text">JAASIM BASHA J – Aspiring Ethical Hacker & Cybersecurity Enthusiast.</h2>
+          <div class="title">Exploring the world of cybersecurity, one tool at a time.</div>
+          <p class="tagline">I’m a 2nd-year Cyber Security student at Mahendra Engineering College. Currently learning hacking tools, penetration testing techniques, and defensive strategies. My goal is to become a certified ethical hacker and security professional.</p>
 
-  <section id="services">
-    <h2>Services</h2>
-    <div class="section-card">
-      <ul>
-        <li><strong>Penetration Testing:</strong> Simulate attacks to expose system vulnerabilities.</li>
-        <li><strong>Security Audits:</strong> Comprehensive review of security posture.</li>
-        <li><strong>Vulnerability Assessment:</strong> Identify and prioritize weaknesses.</li>
-        <li><strong>Consulting:</strong> Tailored cybersecurity strategies and implementation.</li>
-      </ul>
-    </div>
-  </section>
+          <div class="cta">
+            <a href="#about" class="btn">Learn More</a>
+            <a href="#contact" class="btn primary">Contact Me</a>
+          </div>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="section-card">
-      <ul>
-        <li><strong>BankSecure Audit:</strong> Full security audit for a mid-sized bank's web application.</li>
-        <li><strong>E-Commerce Firewall:</strong> Implemented firewall rules and traffic segmentation.</li>
-        <li><strong>PhishGuard:</strong> Developed phishing awareness training for 300+ staff.</li>
-      </ul>
-    </div>
-  </section>
+          <div style="margin-top:18px" class="terminal" aria-hidden>
+            <div>&gt; booting up learning-environment...</div>
+            <div style="opacity:.8;margin-top:8px">&gt; loading tools: python, nmap, burpsuite, wireshark, metasploit...</div>
+          </div>
+        </div>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <div class="section-card contact-form">
-      <form>
-        <input type="text" placeholder="Your Name" required />
-        <input type="email" placeholder="Your Email" required />
-        <textarea rows="5" placeholder="Your Message"></textarea>
-        <button type="submit">Send Message</button>
-      </form>
-      <p style="margin-top: 15px;">
-        Or email me directly: <a href="mailto:jaasim.basha@example.com" style="color:#58a6ff;">jaasim.basha@example.com</a>
-      </p>
-    </div>
-  </section>
+        <aside class="profile-card">
+          <!-- Replace 'profile.jpg' with your actual profile image file -->
+          <img src="profile.jpg" alt="JAASIM BASHA J - profile picture" />
+          <h3>JAASIM BASHA J</h3>
+          <p class="muted">2nd Year — B.E. Cyber Security, Mahendra Engineering College</p>
+          <div style="display:flex;gap:8px">
+            <a class="btn" href="mailto:jaasimbasha23@gmail.com">📧 jaasimbasha23@gmail.com</a>
+            <a class="btn" href="tel:+919176961346">📱 9176961346</a>
+          </div>
+        </aside>
+      </section>
 
-  <footer>
-    &copy; 2025 Jaasim Basha | Cybersecurity Specialist
-  </footer>
+      <!-- About -->
+      <section id="about" class="panel">
+        <h3>About</h3>
+        <p>I’m currently a 2nd-year Cyber Security student at Mahendra Engineering College. I’m passionate about ethical hacking and exploring new tools and technologies in the field of cybersecurity. My goal is to become a certified ethical hacker and security professional.</p>
 
+        <div style="display:flex;gap:18px;margin-top:14px;flex-wrap:wrap">
+          <div style="flex:1;min-width:260px" class="panel">
+            <h4>Quick Facts</h4>
+            <div class="terminal" style="margin-top:8px">&gt; Location: India<br>&gt; College: Mahendra Engineering College<br>&gt; Interested in: Penetration Testing, Web App Security, Networking</div>
+          </div>
+
+          <div style="width:320px;min-width:220px" class="panel">
+            <h4>Profile Photo</h4>
+            <img src="profile.jpg" alt="profile" style="width:100%;height:220px;object-fit:cover;border-radius:10px;margin-top:8px" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section id="skills">
+        <h3>Skills</h3>
+        <div class="skills-grid">
+          <div class="skill panel">
+            <div class="meta"><strong>Programming</strong><span class="muted">Python • C++ • C • Java • PHP • JavaScript</span></div>
+            <div class="progress"><i data-width="85%"></i></div>
+          </div>
+
+          <div class="skill panel">
+            <div class="meta"><strong>Web Development</strong><span class="muted">HTML • CSS • PHP • Flutter</span></div>
+            <div class="progress"><i data-width="68%"></i></div>
+          </div>
+
+          <div class="skill panel">
+            <div class="meta"><strong>Networking</strong><span class="muted">CCNA</span></div>
+            <div class="progress"><i data-width="60%"></i></div>
+          </div>
+
+          <div class="skill panel">
+            <div class="meta"><strong>Scripting</strong><span class="muted">Bash • Shell</span></div>
+            <div class="progress"><i data-width="55%"></i></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Education -->
+      <section id="education" class="panel">
+        <h3>Education</h3>
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <strong>10th</strong>
+            <time>Swamy Vivekananda Matric Higher Secondary School</time>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <strong>12th</strong>
+            <time>Thanthai Hans Roever Hr Sec School</time>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <strong>Current</strong>
+            <time>Mahendra Engineering College — B.E Cyber Security (2nd Year)</time>
+          </div>
+        </div>
+      </section>
+
+      <!-- Portfolio -->
+      <section id="portfolio">
+        <h3>Portfolio (Projects)</h3>
+        <div class="panel placeholder">
+          <h4>Coming Soon</h4>
+          <p class="muted">Exciting projects are on the way as I continue learning and building my cybersecurity skills. Check back soon for walkthroughs, writeups, and demos.</p>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact">
+        <h3>Contact</h3>
+        <div class="contact-grid">
+          <div class="panel contact-list">
+            <div class="contact-item"><i class="fa fa-envelope"></i> <div><strong>Email</strong><div class="muted">jaasimbasha23@gmail.com</div></div></div>
+            <div class="contact-item"><i class="fa fa-phone"></i> <div><strong>Phone</strong><div class="muted">+91 9176961346</div></div></div>
+            <div class="contact-item"><i class="fa fa-instagram"></i> <div><strong>Instagram</strong><div class="muted">_jaas_im_07</div></div></div>
+            <div class="contact-item"><i class="fa fa-github"></i> <div><strong>GitHub</strong><div class="muted">jaasim07</div></div></div>
+            <div class="contact-item"><i class="fa fa-facebook"></i> <div><strong>Facebook</strong><div class="muted">Jaasim Basha</div></div></div>
+          </div>
+
+          <div class="panel">
+            <form id="contactForm">
+              <div style="display:flex;justify-content:space-between;gap:8px">
+                <input type="text" id="name" placeholder="Your name" required />
+                <input type="email" id="email" placeholder="Your email" required />
+              </div>
+
+              <div style="margin-top:8px"><input type="text" id="subject" placeholder="Subject" /></div>
+
+              <div style="margin-top:8px"><textarea id="message" placeholder="Your message..." required></textarea></div>
+
+              <div style="margin-top:12px;display:flex;gap:8px;align-items:center">
+                <button type="submit" class="btn primary">Send Message</button>
+                <div id="formStatus" class="muted">Prefer email? <a href="mailto:jaasimbasha23@gmail.com">Send directly</a></div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        © <span id="year"></span> JAASIM BASHA J • Built with curiosity — Aspiring Ethical Hacker
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    // small helpers
+    const yearEl = document.getElementById('year'); yearEl.textContent = new Date().getFullYear();
+
+    // progress animation
+    document.querySelectorAll('.progress > i').forEach((el, idx)=>{
+      const w = el.dataset.width || '60%';
+      setTimeout(()=>{ el.style.width = w }, 300 + idx*140);
+    });
+
+    // contact form - open mail client with filled fields (safe fallback)
+    document.getElementById('contactForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      const name = encodeURIComponent(document.getElementById('name').value.trim());
+      const email = encodeURIComponent(document.getElementById('email').value.trim());
+      const subject = encodeURIComponent(document.getElementById('subject').value.trim()||'Message from portfolio');
+      const message = encodeURIComponent(document.getElementById('message').value.trim());
+
+      const mailto = `mailto:jaasimbasha23@gmail.com?subject=${subject}&body=Name:%20${name}%0AEmail:%20${email}%0A%0A${message}`;
+      window.location.href = mailto;
+    });
+
+    // smooth scrolling for nav
+    document.querySelectorAll('nav a').forEach(a=>{
+      a.addEventListener('click', (e)=>{
+        e.preventDefault(); document.querySelector(a.getAttribute('href')).scrollIntoView({behavior:'smooth'});
+      });
+    });
+
+    // theme toggle
+    const themeBtn = document.getElementById('themeToggle');
+    let dark = true;
+    themeBtn.addEventListener('click', ()=>{
+      dark = !dark;
+      if(!dark){
+        document.documentElement.style.setProperty('--bg','#f7fafc');
+        document.documentElement.style.setProperty('--panel','#ffffff');
+        document.documentElement.style.setProperty('--muted','#334155');
+        document.documentElement.style.setProperty('--accent','#0ea5a6');
+        document.documentElement.style.setProperty('--accent-2','#0369a1');
+        document.documentElement.style.setProperty('color-scheme','light');
+        themeBtn.textContent = '🌞';
+      } else {
+        document.documentElement.style.setProperty('--bg','#071021');
+        document.documentElement.style.setProperty('--panel','#0f1724');
+        document.documentElement.style.setProperty('--muted','#94a3b8');
+        document.documentElement.style.setProperty('--accent','#00f6a8');
+        document.documentElement.style.setProperty('--accent-2','#00b8ff');
+        document.documentElement.style.setProperty('color-scheme','dark');
+        themeBtn.textContent = '🌙';
+      }
+    });
+
+    // fancy cursor follow
+    const cursor = document.getElementById('cursor');
+    window.addEventListener('pointermove', e=>{
+      cursor.style.left = e.clientX + 'px';
+      cursor.style.top = e.clientY + 'px';
+    });
+
+    // reveal animations on scroll
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(ent=>{
+        if(ent.isIntersecting) ent.target.classList.add('glow');
+        else ent.target.classList.remove('glow');
+      });
+    },{threshold:0.15});
+    document.querySelectorAll('section, .panel, .profile-card').forEach(el=>io.observe(el));
+
+    // accessibility: focus outlines for keyboard users
+    function handleFirstTab(e) {
+      if (e.key === 'Tab') document.body.classList.add('show-focus');
+      window.removeEventListener('keydown', handleFirstTab);
+    }
+    window.addEventListener('keydown', handleFirstTab);
+  </script>
 </body>
 </html>
